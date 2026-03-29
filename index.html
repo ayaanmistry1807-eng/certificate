@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayaan Asif Mistry — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Grid overlay -->
+  <div class="grid-overlay"></div>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-glitch-bar"></div>
+
+    <div class="hero-content">
+      <div class="photo-wrapper">
+        <div class="photo-ring ring1"></div>
+        <div class="photo-ring ring2"></div>
+        <div class="photo-ring ring3"></div>
+        <div class="photo-hex-border"></div>
+        <img src="photo.jpeg" alt="Ayaan Asif Mistry" class="profile-photo" />
+        <div class="photo-scan"></div>
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+      </div>
+
+      <div class="hero-text">
+        <div class="hero-label">
+          <span class="label-line"></span>
+          <span class="label-text">IDENTITY VERIFIED</span>
+          <span class="label-line"></span>
+        </div>
+        <h1 class="hero-name">
+          <span class="name-line" data-text="AYAAN">AYAAN</span>
+          <span class="name-line accent" data-text="ASIF MISTRY">ASIF MISTRY</span>
+        </h1>
+        <div class="hero-tagline">
+          <span class="mono-text">// ACHIEVEMENT ARCHIVE INITIALIZED</span>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" id="certCount">06</span>
+            <span class="stat-label">CERTIFICATES</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">POTENTIAL</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">VERIFIED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span class="mono-text">SCROLL TO EXPLORE</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </header>
+
+  <!-- CERTIFICATES SECTION -->
+  <section class="certs-section">
+    <div class="section-header">
+      <div class="section-line"></div>
+      <h2 class="section-title">
+        <span class="section-tag">[ </span>CERTIFICATES<span class="section-tag"> ]</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="section-sub mono-text">// CLICK ANY CERTIFICATE TO EXPAND FULL VIEW</p>
+
+    <div class="certs-grid">
+      <div class="cert-card" data-index="0" onclick="openLightbox(0)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate1.jpeg" alt="Certificate 1" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-001</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="cert-card" data-index="1" onclick="openLightbox(1)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate2.jpeg" alt="Certificate 2" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-002</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="cert-card" data-index="2" onclick="openLightbox(2)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate3.jpeg" alt="Certificate 3" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-003</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="cert-card" data-index="3" onclick="openLightbox(3)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate4.jpeg" alt="Certificate 4" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-004</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="cert-card" data-index="4" onclick="openLightbox(4)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate5.jpeg" alt="Certificate 5" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-005</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+
+      <div class="cert-card" data-index="5" onclick="openLightbox(5)">
+        <div class="cert-frame">
+          <div class="cert-corner c-tl"></div>
+          <div class="cert-corner c-tr"></div>
+          <div class="cert-corner c-bl"></div>
+          <div class="cert-corner c-br"></div>
+          <div class="cert-scan-line"></div>
+          <img src="certificate6.jpeg" alt="Certificate 6" loading="lazy"/>
+          <div class="cert-overlay">
+            <div class="cert-expand-icon">⤢</div>
+            <span class="cert-expand-text">EXPAND</span>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <span class="cert-id mono-text">CERT-006</span>
+          <span class="cert-status">● VERIFIED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <p class="mono-text footer-text">[ AYAAN ASIF MISTRY ] — ALL RIGHTS RESERVED <span id="year"></span></p>
+    <div class="footer-glow"></div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-ui">
+      <div class="lb-corner lb-tl"></div>
+      <div class="lb-corner lb-tr"></div>
+      <div class="lb-corner lb-bl"></div>
+      <div class="lb-corner lb-br"></div>
+    </div>
+    <div class="lightbox-nav">
+      <button class="lb-btn" id="prevBtn" onclick="event.stopPropagation(); navigateLightbox(-1)">&#10094;</button>
+      <button class="lb-btn" id="nextBtn" onclick="event.stopPropagation(); navigateLightbox(1)">&#10095;</button>
+    </div>
+    <img id="lightboxImg" src="" alt="Certificate" onclick="event.stopPropagation()"/>
+    <div class="lb-info">
+      <span class="mono-text" id="lbLabel">CERT-001</span>
+      <span class="lb-close" onclick="closeLightbox()">✕ CLOSE</span>
+    </div>
+    <div class="lb-scan"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
